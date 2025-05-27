@@ -2,15 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* === Animated Background === */
-.animated-bg {
-  @apply fixed top-0 left-0 w-screen h-screen -z-10 opacity-15;
-  background: linear-gradient(-45deg, #4f46e5, #7c3aed, #2563eb, #0ea5e9);
+/* === Animated Gradient Background === */
+.gradient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  opacity: 0.4;
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradientShift 15s ease infinite;
+  transition: background 1s ease-in-out;
 }
 
-@keyframes gradient {
+/* Light Mode Gradient */
+.light-gradient {
+  background-image: linear-gradient(-45deg, #688195, #7d7f82, #f2f5f7, #5b96b4);
+}
+
+/* Dark Mode Gradient */
+.dark-gradient {
+  background-image: linear-gradient(-45deg, #808081, #2e3f58, #010922, #031034);
+}
+
+@keyframes gradientShift {
   0% {
     background-position: 0% 50%;
   }
@@ -20,31 +36,4 @@
   100% {
     background-position: 0% 50%;
   }
-}
-
-/* === FullCalendar Customization === */
-.task-calendar {
-  --fc-border-color: #e5e7eb;        /* Tailwind: gray-200 */
-  --fc-button-text-color: #374151;   /* Tailwind: gray-700 */
-  --fc-button-bg-color: #ffffff;     /* Tailwind: white */
-  --fc-button-border-color: #d1d5db; /* Tailwind: gray-300 */
-  --fc-button-hover-bg-color: #f3f4f6; /* Tailwind: gray-100 */
-  --fc-button-hover-border-color: #9ca3af; /* Tailwind: gray-400 */
-  --fc-button-active-bg-color: #e5e7eb; /* Tailwind: gray-200 */
-  --fc-today-bg-color: #eff6ff;      /* Tailwind: blue-50 */
-}
-
-.dark .task-calendar {
-  --fc-border-color: #374151;        /* gray-700 */
-  --fc-button-text-color: #e5e7eb;   /* gray-200 */
-  --fc-button-bg-color: #374151;     /* gray-700 */
-  --fc-button-border-color: #4b5563; /* gray-600 */
-  --fc-button-hover-bg-color: #4b5563; /* gray-600 */
-  --fc-button-hover-border-color: #6b7280; /* gray-500 */
-  --fc-button-active-bg-color: #6b7280; /* gray-500 */
-  --fc-today-bg-color: #1e3a8a;      /* blue-900 */
-  --fc-page-bg-color: #1f2937;       /* gray-800 */
-  --fc-neutral-bg-color: #374151;    /* gray-700 */
-  --fc-neutral-text-color: #e5e7eb;  /* gray-200 */
-  --fc-event-text-color: #ffffff;    /* white */
 }
