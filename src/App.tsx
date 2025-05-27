@@ -7,6 +7,7 @@ import Calendar from './components/Calendar';
 import Footer from './components/Footer';
 import { Task, Filter } from './types/Task';
 import useLocalStorage from './hooks/useLocalStorage';
+import './index.css'; 
 
 function App() {
   const [darkMode, setDarkMode] = useLocalStorage<boolean>('darkMode', false);
