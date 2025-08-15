@@ -24,3 +24,26 @@ A sleek and modern **React + TypeScript To-Do application** that helps you stay 
 ---
 
 ## 📂 Project Structure
+```
+src/
+├── components/ # Header, TaskForm, FilterBar, TaskList, Calendar, Footer
+├── hooks/ # Custom hooks like useLocalStorage
+├── types/ # TypeScript type definitions
+├── App.tsx # Main app logic
+├── index.css # Styling
+```
+##📸 Screenshots
+
+<img width="1910" height="1078" alt="image" src="https://github.com/user-attachments/assets/31f44d53-6259-461a-9e16-85d5ab4a11b1" />
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/71aac99f-95c4-4f42-8181-12855bc8385c" />
+
+
+
+
+##📜 License
+
+This project is licensed under the MIT License – feel free to use and modify it.
+
+##✨ Author
+
+Sandun Pahasara – Passionate about building real-world applications with clean and modern UI.
